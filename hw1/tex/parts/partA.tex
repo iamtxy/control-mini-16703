@@ -1,0 +1,64 @@
+\textbf{Part A}
+
+The scaling frequency evaluates to
+\[
+\omega_0 = \sqrt{\frac{1(10/9 + 10)}{(10/9)\cdot 10}} = 1 .
+\]
+
+Then, the kinematic relations, 
+\begin{align}
+\dot{x}_1 &= x_3, \\
+\dot{x}_2 &= x_4 .
+\end{align}
+
+Then, the remaining dynamics are
+\begin{align}
+\dot{x}_3 &= \frac{1}{J_1}
+\left[-c(x_3 - x_4) - k(x_1 - x_2) + k_f I \right], \\
+\dot{x}_4 &= \frac{1}{J_2}
+\left[-c(x_4 - x_3) - k(x_2 - x_1) \right].
+\end{align}
+
+Substituting numerical values:
+\begin{align}
+\dot{x}_3 &= -0.9(x_1 - x_2) - 0.09(x_3 - x_4) + 0.9 I, \\
+\dot{x}_4 &= \phantom{-}0.1(x_1 - x_2) + 0.01(x_3 - x_4).
+\end{align}
+
+Then, 
+\[
+A =
+\begin{bmatrix}
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+-0.9 & 0.9 & -0.09 & 0.09 \\
+0.1 & -0.1 & 0.01 & -0.01
+\end{bmatrix},
+\qquad
+B =
+\begin{bmatrix}
+0 \\ 0 \\ 0.9 \\ 0
+\end{bmatrix}.
+\]
+
+The output is the angular displacement of the external load:
+\[
+y = \varphi_2 = x_2 .
+\]
+
+Thus,
+\[
+C = \begin{bmatrix} 0 & 1 & 0 & 0 \end{bmatrix},
+\qquad
+D = \begin{bmatrix} 0 \end{bmatrix}.
+\]
+
+\[
+\begin{aligned}
+\dot{x} &= A x + B I, \\
+y &= C x
+\end{aligned}
+\]
+
+
+\newpage
